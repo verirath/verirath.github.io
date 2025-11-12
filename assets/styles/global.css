@@ -1,0 +1,70 @@
+/* ---------- Base ---------- */
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #0f172a;
+    background: #fff;
+}
+
+/* ---------- Layout ---------- */
+header, footer {
+    padding: 16px 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+footer {
+    border-top: 1px solid #e5e7eb;
+    border-bottom: none;
+    margin-top: 40px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* ---------- Text & Links ---------- */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.hero h1 {
+    margin: 0.2rem 0;
+}
+.meta {
+    color: #64748b;
+}
+
+/* ---------- Cards ---------- */
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px 24px;
+    background: #fafafa;
+    margin-top: 24px;
+}
+
+/* ---------- Images ---------- */
+.card img {
+    width: 35%;              /* mobile-app style default */
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 16px 0;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+}
+
+@media (max-width: 700px) {
+    .card img {
+        width: 70%;
+        max-width: 90%;
+        margin: 16px auto;
+    }
+}
+
