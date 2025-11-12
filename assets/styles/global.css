@@ -1,21 +1,57 @@
+/* ---------- Color Theme Variables ---------- */
+:root {
+    --bg: #0b1020;
+    --card: #0f172a;
+    --muted: #94a3b8;
+    --text: #e2e8f0;
+    --accent: #60a5fa;
+    --ring: rgba(96,165,250,.4);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --muted: #475569;
+        --text: #0f172a;
+        --accent: #2563eb;
+        --ring: rgba(37,99,235,.25);
+    }
+}
+
 /* ---------- Base ---------- */
-body {
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html, body {
+    height: 100%;
     margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    color: #0f172a;
-    background: #fff;
+    color: var(--text);
+
+    /* Gradient background like index.html */
+    background:
+            radial-gradient(1200px 600px at 80% -10%, rgba(96,165,250,.15), transparent 60%) no-repeat,
+            var(--bg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 /* ---------- Layout ---------- */
 header, footer {
     padding: 16px 24px;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid rgba(148,163,184,.25);
+    color: var(--text);
 }
 footer {
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid rgba(148,163,184,.25);
     border-bottom: none;
     margin-top: 40px;
+    color: var(--muted);
 }
 
 .container {
@@ -26,7 +62,7 @@ footer {
 
 /* ---------- Text & Links ---------- */
 a {
-    color: #2563eb;
+    color: var(--accent);
     text-decoration: none;
 }
 a:hover {
@@ -36,27 +72,34 @@ a:hover {
     margin: 0.2rem 0;
 }
 .meta {
-    color: #64748b;
+    color: var(--muted);
 }
 
 /* ---------- Cards ---------- */
 .card {
-    border: 1px solid #e5e7eb;
+    border: 1px solid rgba(148,163,184,.25);
     border-radius: 12px;
     padding: 20px 24px;
-    background: #fafafa;
+    background: var(--card);
     margin-top: 24px;
+    color: var(--text);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(2,6,23,.2);
+    border-color: var(--accent);
 }
 
 /* ---------- Images ---------- */
 .card img {
-    width: 35%;              /* mobile-app style default */
+    width: 35%;
     max-width: 320px;
     height: auto;
     display: block;
     margin: 16px 0;
     border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid rgba(148,163,184,.25);
     background: #fff;
 }
 
@@ -68,3 +111,7 @@ a:hover {
     }
 }
 
+/* ---------- Utility ---------- */
+p, h1, h2, h3 {
+    margin-top: 0;
+}
