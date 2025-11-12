@@ -4,32 +4,97 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Stockholm Ferris</title>
-    <meta name="description" content="Stockholm Ferris." />
+    <link rel="icon" type="image/png" href="../assets/favicon.jpg" />
+    <meta name="description" content="Stockholm Ferris project case study by Verena Rath." />
     <style>
-        body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;line-height:1.6;color:#0f172a;background:#fff}
-        header,footer{padding:16px 24px;border-bottom:1px solid #e5e7eb}
-        footer{border-top:1px solid #e5e7eb;border-bottom:none;margin-top:40px}
-        .container{max-width:1000px;margin:0 auto;padding:24px}
-        a{color:#2563eb;text-decoration:none}
-        a:hover{text-decoration:underline}
-        .hero h1{margin:.2rem 0}
-        .meta{color:#64748b}
-        iframe{width:100%;height:720px;border:1px solid #e5e7eb;border-radius:12px}
-        .grid{display:grid;grid-template-columns:1fr;gap:16px}
-        @media(min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}
-        .card{border:1px solid #e5e7eb;border-radius:12px;padding:16px}
-        img{max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e7eb}
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #0f172a;
+            background: #fff;
+        }
+
+        header, footer {
+            padding: 16px 24px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        footer {
+            border-top: 1px solid #e5e7eb;
+            border-bottom: none;
+            margin-top: 40px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hero h1 {
+            margin: 0.2rem 0;
+        }
+
+        .meta {
+            color: #64748b;
+        }
+
+        /* Unified card style (same as DejaReve) */
+        .card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px 24px;
+            background: #fafafa;
+            margin-top: 24px;
+        }
+
+        /* Small, neat screenshots (same as DejaReve) */
+        .card img {
+            width: 35%;              /* smaller overall */
+            max-width: 320px;        /* cap for large screens */
+            height: auto;
+            display: block;
+            margin: 16px 0;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            background: #fff;
+        }
+
+        /* Text alignment */
+        .card p {
+            text-align: left;
+            margin-left: 0;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 700px) {
+            .card img {
+                width: 70%;
+                max-width: 90%;
+                margin: 16px auto;
+            }
+        }
     </style>
 </head>
 <body>
 <header>
-     <a href="../index.html" style="font-weight:700;color:inherit">Verena Rath</a>
+    <a href="../index.html" style="font-weight:700;color:inherit">Verena Rath</a>
 </header>
 
 <main class="container">
     <div class="hero">
         <p class="meta"><a href="../index.html">← Back to portfolio</a></p>
-        <h1>Stockholm Ferris </h1>
+        <h1>Stockholm Ferris</h1>
         <p class="meta">Tools: Axure RP 10 ❊ Year: 2023</p>
     </div>
 
@@ -44,30 +109,30 @@
         <div class="card">
             <h2>Screens for the mobile app</h2>
             <p>Homepage of the smartphone app</p>
-            <img src="../assets/StockholmFerris/StockholmFerris-Home.png" alt="StockholmFerris home screen">
+            <img src="../assets/StockholmFerris/StockholmFerris-Home.png" alt="Stockholm Ferris home screen">
             <p>We also provided an overview of all the ferry lines for the user to pick</p>
-            <img src="../assets/StockholmFerris/StockholmFerris-AllLines.png" alt="StockholmFerris allLines" style="margin-top:8px">
+            <img src="../assets/StockholmFerris/StockholmFerris-AllLines.png" alt="Stockholm Ferris all lines">
             <p>If the line has some delay the time is displayed in red</p>
-            <img src="../assets/StockholmFerris/StockholmFerris-LineWithDelay.png" alt="StockholmFerris delay" style="margin-top:8px">
+            <img src="../assets/StockholmFerris/StockholmFerris-LineWithDelay.png" alt="Stockholm Ferris delay">
             <p>It is also possible for the user to check other departures from certain stations</p>
-            <img src="../assets/StockholmFerris/StockholmFerris-OtherDepartures.png" alt="StockholmFerris departures" style="margin-top:8px">
-            <p>Since this app is also for tourists we wanted to add some facts and sightseeing points for each stop </p>
-            <img src="../assets/StockholmFerris/StockholmFerris-GoodToKnow.png" alt="StockholmFerris goodToKnow" style="margin-top:8px">
-            <p>And if someone has feedback we provided a contact page</p>
-            <img src="../assets/StockholmFerris/StockholmFerris-Contact.png" alt="StockholmFerris Contact" style="margin-top:8px">
+            <img src="../assets/StockholmFerris/StockholmFerris-OtherDepartures.png" alt="Stockholm Ferris departures">
+            <p>Since this app is also for tourists we wanted to add some facts and sightseeing points for each stop.</p>
+            <img src="../assets/StockholmFerris/StockholmFerris-GoodToKnow.png" alt="Stockholm Ferris good to know">
+            <p>And if someone has feedback we provided a contact page.</p>
+            <img src="../assets/StockholmFerris/StockholmFerris-Contact.png" alt="Stockholm Ferris contact">
         </div>
     </section>
 
     <section>
         <div class="card">
             <h2>Screens for ferry monitors</h2>
-            <p>Every line has its own design to match the colors in the app. Moreover, the ligh grey circle was the last stop and the other ones are the following stops. <br>
-            If there are departures from a certain stop the number of the line in the corresponding color are shown underneath the circles. <br>
-            Again for the tourists there is a GoodToKnow part on the screen so they have some facts about the stop they are approaching.</p>
-            <img src="../assets/StockholmFerris/cityLine.png" alt="StockholmFerris cityline monitor">
-            <img src="../assets/StockholmFerris/OestraLine.png" alt="StockholmFerris oestraLine monitor" style="margin-top:8px">
-            <p>If the line has some delay the time is displayed in red also on the monitor</p>
-            <img src="../assets/StockholmFerris/delayedLine.png" alt="StockholmFerris delay monitor" style="margin-top:8px">
+            <p>Every line has its own design to match the colors in the app. Moreover, the light grey circle was the last stop and the other ones are the following stops. <br>
+                If there are departures from a certain stop the number of the line in the corresponding color are shown underneath the circles. <br>
+                Again for the tourists there is a “Good to Know” part on the screen so they have some facts about the stop they are approaching.</p>
+            <img src="../assets/StockholmFerris/cityLine.png" alt="Stockholm Ferris city line monitor">
+            <img src="../assets/StockholmFerris/OestraLine.png" alt="Stockholm Ferris Östra line monitor">
+            <p>If the line has some delay the time is displayed in red also on the monitor.</p>
+            <img src="../assets/StockholmFerris/delayedLine.png" alt="Stockholm Ferris delayed line monitor">
         </div>
     </section>
 </main>
