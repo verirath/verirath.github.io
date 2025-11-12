@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Verenas Portfolio</title>
-    <meta name="description" content="Portfolio of Verena: software projects, UI/UX design, ans further stuff." />
+    <title>Verena Rath – Portfolio</title>
+    <meta name="description" content="Portfolio of Verena: software projects, UI/UX design." />
     <meta property="og:title" content="Verena – Portfolio" />
-    <meta property="og:description" content="Software projects, UI/UX design, and case studies." />
+    <meta property="og:description" content="Software projects, UI/UX design." />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#0f172a" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #b8c2e1;
+            --bg: #0b1020;
             --card: #0f172a; /* slate-900 */
             --muted: #94a3b8; /* slate-400 */
             --text: #e2e8f0;  /* slate-200 */
@@ -53,6 +53,8 @@
         .card { grid-column: span 6; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); border: 1px solid rgba(148,163,184,.2); border-radius: 16px; padding: 16px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s; }
         .card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(2,6,23,.25); border-color: rgba(96,165,250,.35); }
         .thumb { aspect-ratio: 16/9; border-radius: 12px; background: #0b1220; display: grid; place-items: center; color: var(--muted); overflow: hidden; border: 1px solid rgba(148,163,184,.18); }
+        .selfie { aspect-ratio: 3/4; border-radius: 12px; background: #0b1220; display: grid; place-items: center; color: var(--muted); overflow: hidden; border: 1px solid rgba(148,163,184,.18); }
+        .selfie img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .meta { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 10px; }
         .title { font-weight: 600; letter-spacing: .2px; }
@@ -80,14 +82,101 @@
 <body>
 <div class="container">
     <header>
-        <div class="brand">Verenas Portfoilio</div>
+        <div class="brand">Verena Rath</div>
     </header>
 
+    <section class="hero" id="about">
+        <div>
+            <h1>Hello there! <br> My name is Verena.</h1>
+
+            <p>I am currently in my masters studying informatics at the university of klagenfurt. Before that I finished my bachelors degree in applied informatics. <br>
+            Besides that i love playing tennis and hanging out with my friends. <br>
+            The goal of this page is to give you an overview of my previous projects i completed at uni or in my free time. So have fun exploring. :) </p>
+        </div>
+        <div class="selfie" aria-hidden="true">
+           <img src="assets/selfPortrait.jpeg">
+        </div>
+    </section>
+
+    <section id="work" class="section">
+        <h2>Projects</h2>
+        <div class="filters" role="toolbar" aria-label="Filter projects">
+            <button class="pill" data-filter="all" aria-pressed="true">All</button>
+            <button class="pill" data-filter="code">Code</button>
+            <button class="pill" data-filter="design">Design</button>
+        </div>
+        <div class="grid" id="projects">
+            <a href="projects/Rohrpost.html" class="card" style="display:block;text-decoration:none;color:inherit;">
+                <div class="thumb">
+                    <img alt="Rohrpost prototype" src="https://picsum.photos/seed/rohrpost/1200/675"/>
+                </div>
+                <div class="meta">
+                    <div>
+                        <div class="title">Rohrpost – Prototype</div>
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="card">
+            <p>Email: <a href="mailto:verirath@gmail.com">verirath@gmail.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/verena-rath-71b590229/" target="_blank" rel="noopener">Verena Rath</a></p>
+        </div>
+    </section>
+
     <footer>
-        © <span id="year">2025</span> Verena Rath. All rights reserved.
+        © <span id="year"></span> Verena. All rights reserved.
     </footer>
 </div>
 
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple filter system
+    const pills = document.querySelectorAll('.pill');
+    const cards = document.querySelectorAll('#projects .card');
+    pills.forEach(p => p.addEventListener('click', () => {
+        pills.forEach(x => x.setAttribute('aria-pressed', 'false'));
+        p.setAttribute('aria-pressed', 'true');
+        const f = p.dataset.filter;
+        cards.forEach(c => {
+            const tags = c.getAttribute('data-tags');
+            const match = f === 'all' || tags.split(/\s+/).includes(f);
+            c.style.display = match ? '' : 'none';
+        });
+    }));
+
+    // Respect reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('*').forEach(el => el.style.transition = 'none');
+    }
+</script>
+<script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple filter system
+    const pills = document.querySelectorAll('.pill');
+    const cards = document.querySelectorAll('#projects .card');
+    pills.forEach(p => p.addEventListener('click', () => {
+        pills.forEach(x => x.setAttribute('aria-pressed', 'false'));
+        p.setAttribute('aria-pressed', 'true');
+        const f = p.dataset.filter;
+        cards.forEach(c => {
+            const tags = c.getAttribute('data-tags');
+            const match = f === 'all' || tags.split(/\s+/).includes(f);
+            c.style.display = match ? '' : 'none';
+        });
+    }));
+
+    // Respect reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('*').forEach(el => el.style.transition = 'none');
+    }
 </script>
 </body>
 </html>

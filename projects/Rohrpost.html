@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rohrpost – Prototype</title>
+    <meta name="description" content="Rohrpost prototype case study and interactive preview." />
+    <style>
+        body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;line-height:1.6;color:#0f172a;background:#fff}
+        header,footer{padding:16px 24px;border-bottom:1px solid #e5e7eb}
+        footer{border-top:1px solid #e5e7eb;border-bottom:none;margin-top:40px}
+        .container{max-width:1000px;margin:0 auto;padding:24px}
+        a{color:#2563eb;text-decoration:none}
+        a:hover{text-decoration:underline}
+        .hero h1{margin:.2rem 0}
+        .meta{color:#64748b}
+        iframe{width:100%;height:720px;border:1px solid #e5e7eb;border-radius:12px}
+        .grid{display:grid;grid-template-columns:1fr;gap:16px}
+        @media(min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}
+        .card{border:1px solid #e5e7eb;border-radius:12px;padding:16px}
+        img{max-width:100%;height:auto;border-radius:12px;border:1px solid #e5e7eb}
+    </style>
+</head>
+<body>
+<header>
+     <a href="/index.html" style="font-weight:700;color:inherit">Verena Rath</a>
+</header>
+
+<main class="container">
+    <div class="hero">
+        <p class="meta"><a href="/">← Back to portfolio</a></p>
+        <h1>Rohrpost – Prototype</h1>
+        <p class="meta">Role: Product Designer · Tools: Figma · Year: 2025</p>
+    </div>
+
+    <!-- Interactive prototype (Figma) -->
+    <section class="card" aria-label="Interactive prototype">
+        <iframe
+                title="Rohrpost Figma prototype"
+                allowfullscreen
+                src="https://www.figma.com/embed?embed_host=share&url=FIGMA_FILE_URL_HERE">
+        </iframe>
+        <p style="margin-top:8px" class="meta">
+            If the embed doesn’t load, <a href="FIGMA_FILE_URL_HERE" target="_blank" rel="noopener">open the prototype in a new tab</a>.
+        </p>
+    </section>
+
+    <!-- Case study summary -->
+    <section class="grid" style="margin-top:24px">
+        <div class="card">
+            <h2>Problem</h2>
+            <p>Briefly describe the user problem / goal (e.g., send messages through “tubes” across teams quickly, with delivery status).</p>
+            <h2>Solution</h2>
+            <p>Summarize the core UX: flows, IA, and key interactions. Call out constraints and trade-offs.</p>
+            <h2>Outcome</h2>
+            <ul>
+                <li>Usability test completion rate: XX%</li>
+                <li>Avg task time reduced by YY%</li>
+                <li>Stakeholder feedback & next steps</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Screens</h2>
+            <p>Add a few key screens or gifs here:</p>
+            <!-- Replace with your exports -->
+            <img src="../assets/images/rohrpost-1.png" alt="Rohrpost inbox screen">
+            <img src="../assets/images/rohrpost-2.png" alt="Rohrpost compose flow" style="margin-top:8px">
+        </div>
+    </section>
+</main>
+
+<footer>
+    © <span id="year"></span> Your Name
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
